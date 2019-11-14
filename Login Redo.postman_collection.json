@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "22b68aa2-e99a-4214-b3ff-2efd11143dc2",
+		"name": "Login Redo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ECM2",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "084cd55c-a451-4448-bf1f-4b166d7f7d13",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "timezoneOffset",
+									"value": "240"
+								},
+								{
+									"key": "ptmode",
+									"value": "f"
+								},
+								{
+									"key": "ptlangcd",
+									"value": "ENG"
+								},
+								{
+									"key": "ptinstalledlang",
+									"value": "CFR,ENG"
+								},
+								{
+									"key": "userid",
+									"value": "EG93052"
+								},
+								{
+									"key": "pwd",
+									"value": "password"
+								},
+								{
+									"key": "ptlangsel",
+									"value": "ENG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ECMURL11}}/psp/{{ECMURL22}}/?cmd=login&languageCd=ENG",
+							"host": [
+								"{{ECMURL11}}"
+							],
+							"path": [
+								"psp",
+								"{{ECMURL22}}",
+								""
+							],
+							"query": [
+								{
+									"key": "cmd",
+									"value": "login"
+								},
+								{
+									"key": "languageCd",
+									"value": "ENG"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
