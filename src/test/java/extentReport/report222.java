@@ -19,7 +19,7 @@ public class report222 {
 public static void main(String[] args) {
 	// Do this line for testing Stash purposes, adding the sentence in locolly.
 
-	// want to see those uses line dispear after i remove the stash
+	// want to see those uses line dispear after i remove the stash, local adding 
 	
 	//Step 1     
 	ExtentReports report = new ExtentReports();                    
